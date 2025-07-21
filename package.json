@@ -1,7 +1,10 @@
 {
   "homepage": "https://junbeomkim-01.github.io/PORTFOLIO/",
   "scripts": {
-    "deploy":"gh-pages -d public"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "gh-pages": "^6.3.0"
