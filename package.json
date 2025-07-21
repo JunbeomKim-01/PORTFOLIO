@@ -1,0 +1,9 @@
+{
+  "homepage": "https://junbeomkim-01.github.io/PORTFOLIO/",
+  "scripts": {
+    "deploy":"gh-pages -d public"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
