@@ -2,12 +2,11 @@
   "homepage": "https://junbeomkim-01.github.io/PORTFOLIO/",
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
-    "deploy": "gh-pages -d build"
+    "build": "craco build"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
-    "gh-pages": "^6.3.0",
+    
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11"
   },
