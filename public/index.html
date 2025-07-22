@@ -1,95 +1,86 @@
-/*
-  Vogue-Inspired Portfolio Site
-  Remember to include the following in your index.html:
-  - Link to Google Font: 'Playfair Display' for headings
-  - Tailwind CSS setup
-*/
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Instagram, Dribbble } from 'lucide-react';
-
-export default function Portfolio() {
-  return (
-    <div className="font-serif text-gray-900 leading-relaxed">
-      {/* Header */}
-      <header className="p-8 flex justify-between items-center">
-        <h1 className="text-3xl tracking-wide">Your Name</h1>
-        <nav className="space-x-6 uppercase text-sm">
-          <a href="#portfolio" className="hover:underline">Work</a>
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#contact" className="hover:underline">Contact</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elara Vance - Fashion Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="container">
+            <h1 class="site-title">ELARA VANCE</h1>
+            <ul class="main-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-      </header>
+    </header>
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src="/hero-image.jpg"
-          alt="Hero"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <motion.h2
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="text-white text-5xl md:text-7xl font-bold z-10 text-center px-4"
-        >
-          A Portfolio of Artistry
-        </motion.h2>
-      </section>
-
-      {/* Portfolio Grid */}
-      <section id="portfolio" className="py-16 px-8 bg-white">
-        <h2 className="text-4xl mb-8 text-center uppercase">Selected Works</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {['work1.jpg', 'work2.jpg', 'work3.jpg'].map((img, idx) => (
-            <motion.div
-              key={idx}
-              whileHover={{ scale: 1.05 }}
-              className="rounded-2xl overflow-hidden shadow-lg bg-gray-50"
-            >
-              <img
-                src={`/${img}`}
-                alt={`Work ${idx + 1}`}
-                className="object-cover w-full h-80"
-              />
-              <div className="p-6">
-                <h3 className="text-xl mb-2 font-semibold">Project Title {idx + 1}</h3>
-                <p className="text-gray-600 text-sm">
-                  A brief caption that conveys the mood and inspiration behind this piece.
-                </p>
-              </div>
-            </motion.div>
-          ))}
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>ELARA VANCE</h2>
+            <p>Elegance Redefined. Craftsmanship Unveiled.</p>
+            <a href="#collections" class="btn-view-collections">View Collections</a>
         </div>
-      </section>
+    </section>
 
-      {/* About Section */}
-      <section id="about" className="py-16 px-8">
-        <h2 className="text-4xl mb-4 text-center uppercase">About Me</h2>
-        <p className="max-w-3xl mx-auto text-center text-gray-700">
-          An evocative narrative that highlights your artistic journey, influences, and philosophy.
-        </p>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-16 px-8 bg-gray-100">
-        <h2 className="text-4xl mb-8 text-center uppercase">Get In Touch</h2>
-        <div className="flex justify-center space-x-6">
-          <a href="https://instagram.com/" aria-label="Instagram">
-            <Instagram size={24} />
-          </a>
-          <a href="https://dribbble.com/" aria-label="Dribbble">
-            <Dribbble size={24} />
-          </a>
+    <section id="collections" class="collections-section">
+        <h2 class="section-title">Our Collections</h2>
+        <div class="container collection-grid">
+            <div class="collection-item">
+                <img src="https://images.unsplash.com/photo-1581044777550-4cfa607037dc?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=1200&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3" alt="Spring/Summer 2025">
+                <h3>Spring/Summer 2025</h3>
+                <p>A collection inspired by the ethereal beauty of nature and modern architecture.</p>
+            </div>
+            <div class="collection-item">
+                <img src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=1200&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3" alt="Autumn/Winter 2024">
+                <h3>Autumn/Winter 2024</h3>
+                <p>Bold silhouettes and rich textures, a tribute to timeless sophistication.</p>
+            </div>
+            <div class="collection-item">
+                <img src="https://images.unsplash.com/photo-1529626465617-b718a01780dc?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=1200&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3" alt="Bridal Couture">
+                <h3>Bridal Couture</h3>
+                <p>Exquisite designs for the modern bride, blending tradition with contemporary flair.</p>
+            </div>
         </div>
-      </section>
+    </section>
 
-      {/* Footer */}
-      <footer className="py-8 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} Your Name. All rights reserved.
-      </footer>
-    </div>
-  );
-}
+    <section id="about" class="about-section">
+        <div class="container content-wrapper">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e3?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=1200&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3" alt="About Elara Vance">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">About ELARA VANCE</h2>
+                <p>Elara Vance is a visionary fashion designer known for her innovative approach to classic silhouettes and her meticulous attention to detail. With a background in fine arts and haute couture, Elara's designs blend artistic expression with wearable elegance.</p>
+                <p>Her philosophy centers on creating pieces that empower the wearer, celebrating individuality and timeless style. Each collection is a narrative, meticulously crafted to evoke emotion and inspire confidence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="container">
+            <p>For collaborations, inquiries, or to schedule a private viewing, please feel free to contact us.</p>
+            <div class="contact-links">
+                <a href="mailto:contact@elaravance.com">Email</a>
+                <a href="https://www.instagram.com/elaravance_official" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://dribbble.com/elaravance" target="_blank" rel="noopener noreferrer">Dribbble</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 ELARA VANCE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
